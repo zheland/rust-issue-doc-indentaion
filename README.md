@@ -38,7 +38,7 @@ This behavior might be usefull for saving identical indents in documentation dec
 ```
 but in general this behavior is not explicit.
 
-For example [syn crate](https://crates.io/crates/syn) produce exactly the same output when parsing docs for both functions and preserves all the spaces ([test](https://github.com/zheland/rust-issue-doc-indentaion/blob/master/tests/equal-docs.rs)).
+For example [syn crate](https://crates.io/crates/syn) produce exactly the same output when parsing docs both functions with `syn::parse_file` and preserves all the spaces.
 
 If this behavior is intentional it should be docummented.
 
