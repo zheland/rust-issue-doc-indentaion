@@ -1,6 +1,6 @@
 # rust-issue-doc-indentaion
 
-## Rustdoc treats indentations in the following syntactically same doc-comments and doc-attributes differently
+## Rustdoc treats indentations in the consecutive syntactically same doc-comments and doc-attributes differently
 
 According to <https://doc.rust-lang.org/rustdoc/the-doc-attribute.html>
 the lines below are the same:
@@ -47,3 +47,5 @@ More examples:
 * [File with doc-attributes only](https://github.com/zheland/rust-issue-doc-indentaion/blob/master/src/mod2.rs) that [generates docs with CodeBlock](https://htmlpreview.github.io/?https://github.com/zheland/rust-issue-doc-indentaion/blob/master/doc/rust_issue_doc_indentaion/mod2/fn.func.html),
 * [File with both doc-comments and doc-attributes](https://github.com/zheland/rust-issue-doc-indentaion/blob/master/src/mod3.rs) that [generates docs without CodeBlock](https://htmlpreview.github.io/?https://github.com/zheland/rust-issue-doc-indentaion/blob/master/doc/rust_issue_doc_indentaion/mod3/fn.func.html).
 * [File with both doc-attributes and doc-comments](https://github.com/zheland/rust-issue-doc-indentaion/blob/master/src/mod4.rs) that [generates docs without CodeBlock](https://htmlpreview.github.io/?https://github.com/zheland/rust-issue-doc-indentaion/blob/master/doc/rust_issue_doc_indentaion/mod4/fn.func.html).
+
+Reproduced with `cargo doc` on `rustc 1.47.0 (18bf6b4f0 2020-10-07)` and `rustc 1.49.0-nightly (91a79fb29 2020-10-07)`
