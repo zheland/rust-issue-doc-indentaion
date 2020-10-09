@@ -11,14 +11,14 @@ the lines below are the same:
 
 But when mixing doc-comments and doc-attributes indentation in the next comment or attribute is ignored.
 
-For example `rust doc` generate different doc pages for:
+For example `rust doc` generate different doc pages for
 ```rust
 ///Header
 ///
 ///    assert!(true);
 pub fn func() {}
 ```
-and:
+and
 ```rust
 ///Header
 ///
@@ -26,7 +26,7 @@ and:
 pub fn func() {}
 ```
 
-where `"____assert!(true);"` become `CodeBlock` for first function ([generated docs](https://htmlpreview.github.io/?https://github.com/zheland/rust-issue-doc-indentaion/blob/master/doc/rust_issue_doc_indentaion/mod1/fn.func.html)), but `"____assert!(true);"` become plain text paragraph for second function ([generated docs](https://htmlpreview.github.io/?https://github.com/zheland/rust-issue-doc-indentaion/blob/master/doc/rust_issue_doc_indentaion/mod3/fn.func.html)).
+where `"///____assert!(true);"` produce `CodeBlock` for the first function ([generated docs](https://htmlpreview.github.io/?https://github.com/zheland/rust-issue-doc-indentaion/blob/master/doc/rust_issue_doc_indentaion/mod1/fn.func.html)), but `#[doc = "____assert!(true);"]` produce plain text paragraph for the second function ([generated docs](https://htmlpreview.github.io/?https://github.com/zheland/rust-issue-doc-indentaion/blob/master/doc/rust_issue_doc_indentaion/mod3/fn.func.html)).
 
 This behavior might be usefull for saving identical indents in documentation declared in comments and attributes:
 ```rust
