@@ -11,7 +11,7 @@ the lines below are the same:
 
 But when mixing doc-comments and doc-attributes indentation in the next comment or attribute is ignored.
 
-For example `rust doc` generate different doc pages for
+For example `cargo doc` generate different doc pages for
 ```rust
 ///Header
 ///
@@ -40,7 +40,7 @@ but in general this behavior is not explicit.
 
 For example [syn crate](https://crates.io/crates/syn) produce exactly the same output when parsing docs both functions with `syn::parse_file` and preserves all the spaces.
 
-If this behavior is intentional it should be docummented.
+If this behavior is intentional it should be documented.
 
 More examples:
 * [File with doc-comments only](https://github.com/zheland/rust-issue-doc-indentaion/blob/master/src/mod1.rs) that [generates docs with CodeBlock](https://htmlpreview.github.io/?https://github.com/zheland/rust-issue-doc-indentaion/blob/master/doc/rust_issue_doc_indentaion/mod1/fn.func.html),
