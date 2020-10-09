@@ -1,0 +1,4 @@
+var searchIndex = JSON.parse('{\
+"rust_issue_doc_indentaion":{"doc":"","i":[[0,"mod1","rust_issue_doc_indentaion","",null,null],[5,"func","rust_issue_doc_indentaion::mod1","Header",null,[[]]],[0,"mod2","rust_issue_doc_indentaion","",null,null],[5,"func","rust_issue_doc_indentaion::mod2","Header",null,[[]]],[0,"mod3","rust_issue_doc_indentaion","",null,null],[5,"func","rust_issue_doc_indentaion::mod3","Header",null,[[]]],[0,"mod4","rust_issue_doc_indentaion","",null,null],[5,"func","rust_issue_doc_indentaion::mod4","Header",null,[[]]]],"p":[]}\
+}');
+addSearchOptions(searchIndex);initSearch(searchIndex);

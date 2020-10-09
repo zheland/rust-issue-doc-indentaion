@@ -1,0 +1,13 @@
+[package]
+name = "rust-issue-doc-indentaion"
+version = "0.1.0"
+authors = ["Andrey Zheleznov <zheland.net@gmail.com>"]
+edition = "2018"
+description = "Examples for rust doc-indentation issue"
+readme = "README.md"
+repository = "https://github.com/zheland/rust-issue-doc-indentaion"
+license = "MIT OR Apache-2.0"
+
+[dev-dependencies.syn]
+version = "1.0"
+features = ["full", "extra-traits"]
