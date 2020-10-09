@@ -36,14 +36,14 @@ This behavior might be usefull for saving identical indents in documentation dec
 "#)]
 /// continuation with visually the same indentation
 ```
-but it is not naturally expected and explicit.
+but this behavior is not explicit.
 
-For example [syn crate](https://crates.io/crates/syn) produce exactly the same output for when parsing docs for `fn foo()` and `fn bar()`.
+For example [syn crate](https://crates.io/crates/syn) produce exactly the same output for when parsing docs for both functions and preserves all the spaces.
 
 If this behavior is intentional it should be docummented.
 
-Examples are available at links:
-[Source with doc-comments only](https://github.com/zheland/rust-issue-doc-indentaion/blob/master/src/mod1.rs),
-[Generated docs with CodeBlock](https://github.com/zheland/rust-issue-doc-indentaion/blob/master/doc/rust_issue_doc_indentaion/mod1/fn.func.html),
-[Source with both doc-comments and doc-attributes](https://github.com/zheland/rust-issue-doc-indentaion/blob/master/src/mod3.rs),
-[Generates docs without CodeBlock](https://github.com/zheland/rust-issue-doc-indentaion/blob/master/doc/rust_issue_doc_indentaion/mod3/fn.func.html).
+More examples:
+* [File with doc-comments only](https://github.com/zheland/rust-issue-doc-indentaion/blob/master/src/mod1.rs) that [generates docs with CodeBlock](https://htmlpreview.github.io/?https://github.com/zheland/rust-issue-doc-indentaion/blob/master/doc/rust_issue_doc_indentaion/mod1/fn.func.html),
+* [File with doc-attributes only](https://github.com/zheland/rust-issue-doc-indentaion/blob/master/src/mod2.rs) that [generates docs with CodeBlock](https://htmlpreview.github.io/?https://github.com/zheland/rust-issue-doc-indentaion/blob/master/doc/rust_issue_doc_indentaion/mod2/fn.func.html),
+* [File with both doc-comments and doc-attributes](https://github.com/zheland/rust-issue-doc-indentaion/blob/master/src/mod3.rs) that [generates docs without CodeBlock](https://htmlpreview.github.io/?https://github.com/zheland/rust-issue-doc-indentaion/blob/master/doc/rust_issue_doc_indentaion/mod3/fn.func.html).
+* [File with both doc-attributes and doc-comments](https://github.com/zheland/rust-issue-doc-indentaion/blob/master/src/mod4.rs) that [generates docs without CodeBlock](https://htmlpreview.github.io/?https://github.com/zheland/rust-issue-doc-indentaion/blob/master/doc/rust_issue_doc_indentaion/mod4/fn.func.html).
