@@ -1,6 +1,6 @@
 # rust-issue-doc-indentaion
 
-## Rustdoc treats indentations in the following syntactically the same doc-comments and doc-attributes differently
+## Rustdoc treats indentations in the following syntactically same doc-comments and doc-attributes differently
 
 According to <https://doc.rust-lang.org/rustdoc/the-doc-attribute.html>
 the lines below are the same:
@@ -26,7 +26,7 @@ and:
 pub fn func() {}
 ```
 
-where `"____assert!(true);"` become `CodeBlock` for first function ([example](https://github.com/zheland/rust-issue-doc-indentaion/blob/master/doc/rust_issue_doc_indentaion/mod1/fn.func.html)), but `"____assert!(true);"` become plain text paragraph for second function ([example](https://github.com/zheland/rust-issue-doc-indentaion/blob/master/doc/rust_issue_doc_indentaion/mod3/fn.func.html)).
+where `"____assert!(true);"` become `CodeBlock` for first function ([generated docs](https://htmlpreview.github.io/?https://github.com/zheland/rust-issue-doc-indentaion/blob/master/doc/rust_issue_doc_indentaion/mod1/fn.func.html)), but `"____assert!(true);"` become plain text paragraph for second function ([generated docs](https://htmlpreview.github.io/?https://github.com/zheland/rust-issue-doc-indentaion/blob/master/doc/rust_issue_doc_indentaion/mod3/fn.func.html)).
 
 This behavior might be usefull for saving identical indents in documentation declared in comments and attributes:
 ```rust
@@ -36,9 +36,9 @@ This behavior might be usefull for saving identical indents in documentation dec
 "#)]
 /// continuation with visually the same indentation
 ```
-but this behavior is not explicit.
+but in general this behavior is not explicit.
 
-For example [syn crate](https://crates.io/crates/syn) produce exactly the same output for when parsing docs for both functions and preserves all the spaces.
+For example [syn crate](https://crates.io/crates/syn) produce exactly the same output when parsing docs for both functions and preserves all the spaces ([test](https://github.com/zheland/rust-issue-doc-indentaion/blob/master/tests/equal-docs.rs)).
 
 If this behavior is intentional it should be docummented.
 
